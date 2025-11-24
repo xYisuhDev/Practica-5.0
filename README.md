@@ -34,4 +34,23 @@ Each class includes its own methods (beyond the usual getters & setters) so you 
 
 ---
 
+## 🧱 Core Domain Model
+
+The system is organized around three abstract pillars:
+
+- 📖 **Libro** → extended by `LibroFisico` (páginas, ubicación) and `LibroDigital` (formato, tamaño MB).
+- 🧍 **Persona** → with the subclasses `Usuario` (nº socio, préstamos) and `Empleado` (puesto, sueldo).
+- 🏠 **Sala** → specialized at `SalaLectura`, `SalaEstudio` and `SalaInformatica`, all managed from `Biblioteca`.
+
+La clase `Biblioteca` compone salas, agrega libros y mantiene el registro de personas que realizan visitas o se convierten en responsables de cada sala.
+
+## 📋 Funcionalidades destacadas
+
+- Visits log (`registrarVisita`) and hall managers (`asignarResponsable`).
+- Gestión diferenciada de libros físicos y digitales Differentiated managing of `LibrosFisicos` and `LibrosDigitales`.
+- Association of users with borrowed books and employees as reference staff.
+- Full deployment of the library's state(salas, libros, personas) from `mostrarInformacion()`.
+
+---
+
 Made with ❤️ by _Jesús Palma González_
